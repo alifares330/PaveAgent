@@ -1,0 +1,116 @@
+/* Global CSS Variables for Consistent Styling
+ * Include this file in your HTML with:
+ * <link rel="stylesheet" href="global-styles.css">
+ */
+
+:root {
+    /* Color palette */
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --disabled-color: #808080;
+    --text-color: #333;
+    --light-text: #555;
+    --border-color: #ddd;
+    --bg-color: #fff;
+    --light-bg: #f8f9fa;
+    --error-color: #ff0000;
+    --error-bg: #fee2e2;
+    --error-border: #ef4444;
+    --error-text: #991b1b;
+    --success-color: #28a745;
+    
+    /* Typography */
+    --font-family: 'UCity Pro', sans-serif;
+    --font-size-small: 12px;
+    --font-size-normal: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 18px;
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    
+    /* Elements */
+    --border-radius: 4px;
+    --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+/* Base element styling */
+body, button, input, select, textarea, 
+h1, h2, h3, h4, h5, h6, p, span, div {
+    font-family: var(--font-family);
+}
+
+/* Button styling */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    font-family: var(--font-family);
+    padding: 8px 15px;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+}
+
+button:disabled {
+    background-color: var(--disabled-color);
+    cursor: not-allowed;
+}
+
+/* Form elements */
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Common container styling */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+}
+
+/* Error message styling */
+.error-message {
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-text);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-small);
+}
+
+/* Success message styling */
+.success-message {
+    background-color: rgba(40, 167, 69, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-small);
+}
